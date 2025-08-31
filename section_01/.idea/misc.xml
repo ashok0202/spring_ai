@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/spring_ai/pom.xml" />
         <option value="$PROJECT_DIR$/open_ai/pom.xml" />
         <option value="$PROJECT_DIR$/dockermodel/pom.xml" />
+        <option value="$PROJECT_DIR$/awsBedrock/pom.xml" />
+        <option value="$PROJECT_DIR$/multimodel/pom.xml" />
       </list>
     </option>
   </component>

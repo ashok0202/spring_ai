@@ -9,11 +9,23 @@
         <module name="spring_ai" />
         <module name="dockermodel" />
       </profile>
+      <profile name="Annotation profile for multimodel" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="multimodel" />
+        <module name="awsBedrock" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="awsBedrock" options="-parameters" />
       <module name="dockermodel" options="-parameters" />
+      <module name="multimodel" options="-parameters" />
       <module name="spring_ai" options="-parameters" />
     </option>
   </component>
