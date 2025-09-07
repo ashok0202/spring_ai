@@ -18,6 +18,7 @@ public class ChatClientConfig{
                          kindly inform them that you can only assist with queries related to\\s
                          HR policies.
                         """)
+                .defaultUser("How can you help me ?")
                 .build();
     }
 }
