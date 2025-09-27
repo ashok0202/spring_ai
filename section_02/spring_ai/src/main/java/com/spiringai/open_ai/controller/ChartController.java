@@ -1,5 +1,6 @@
 package com.spiringai.open_ai.controller;
 
+import com.spiringai.open_ai.advisors.TokenUsageAuditAdvisor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,6 +20,7 @@ public class ChartController {
     public String getChart(@RequestParam("message") String message) {
 
         return  chatClient.prompt()
+                //.advisors(new TokenUsageAuditAdvisor())   //applied as global
                 .system("""
                         You are an internal IT helpdesk assistant. Your role is to assist\s
                         employees with IT-related issues such as resetting passwords,\s
