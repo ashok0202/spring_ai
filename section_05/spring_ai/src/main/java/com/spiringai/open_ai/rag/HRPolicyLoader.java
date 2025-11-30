@@ -14,24 +14,24 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-    public class HRPolicyLoader {
+public class HRPolicyLoader {
 
-        private final VectorStore vectorStore;
+    private final VectorStore vectorStore;
 
-        @Value("classpath:springAi_HR_Policies.pdf")
-        Resource policyFile;
+    @Value("classpath:springAi_HR_Policies.pdf")
+    Resource policyFile;
 
-        public HRPolicyLoader(VectorStore vectorStore) {
-            this.vectorStore = vectorStore;
-        }
+    public HRPolicyLoader(VectorStore vectorStore) {
+        this.vectorStore = vectorStore;
+    }
 
-        @PostConstruct
-        public void loadPDF() {
-            TikaDocumentReader tikaDocumentReader = new TikaDocumentReader(policyFile);
-            List<Document> docs = tikaDocumentReader.get();
-            TextSplitter textSplitter =
-                    TokenTextSplitter.builder().withChunkSize(200).withMaxNumChunks(400).build();
-            vectorStore.add(textSplitter.split(docs));
-        }
+    @PostConstruct
+    public void loadPDF() {
+        TikaDocumentReader tikaDocumentReader = new TikaDocumentReader(policyFile);
+        List<Document> docs = tikaDocumentReader.get();
+        TextSplitter textSplitter =
+                TokenTextSplitter.builder().withChunkSize(200).withMaxNumChunks(400).build();
+        vectorStore.add(textSplitter.split(docs));
+    }
 
 }

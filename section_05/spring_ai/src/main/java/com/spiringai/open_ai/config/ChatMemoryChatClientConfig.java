@@ -69,6 +69,19 @@ public class ChatMemoryChatClientConfig {
                 .build();
     }
 
+
+    /**
+     * Configures a RetrievalAugmentationAdvisor which uses a VectorStore to
+     * retrieve relevant documents from the vector store based on the user's
+     * message. The retrieved documents are then used to generate a response
+     * using the provided chat client builder.
+     *
+     * @param vectorStore the vector store to use for retrieving documents
+     * @param chatClientBuilder the chat client builder to use for generating
+     * responses
+     * @return the configured RetrievalAugmentationAdvisor
+     * if it's also work as a per-retrieval advisor
+     */
     @Bean
     RetrievalAugmentationAdvisor retrievalAugmentationAdvisor(VectorStore vectorStore,
                                                               ChatClient.Builder chatClientBuilder) {

@@ -34,8 +34,8 @@ public class RAGController {
                          @Qualifier("webSearchRAGChatClient") ChatClient webSearchchatClient,
                          VectorStore vectorStore) {
         this.chatClient = chatClient;
-        this.webSearchchatClient = webSearchchatClient;
         this.vectorStore = vectorStore;
+        this.webSearchchatClient = webSearchchatClient;
     }
 
     @GetMapping("/random/chat")

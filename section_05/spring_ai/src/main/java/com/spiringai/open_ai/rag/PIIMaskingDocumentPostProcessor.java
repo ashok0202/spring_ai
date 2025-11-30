@@ -34,7 +34,7 @@ public class PIIMaskingDocumentPostProcessor implements DocumentPostProcessor {
     }
 
     @Override
-    public List<Document> process(Query query, List<Document> documents) {
+    public List<Document>   process(Query query, List<Document> documents) {
         Assert.notNull(query, "query cannot be null");
         Assert.notNull(documents, "documents cannot be null");
         Assert.noNullElements(documents, "documents cannot contain null elements");
