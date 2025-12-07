@@ -1,14 +1,17 @@
 package com.spiringai.open_ai.tools;
 
-import com.spiringai.open_ai.entity.HelpDeskTicket;
-import com.spiringai.open_ai.model.TicketRequest;
-import com.spiringai.open_ai.service.HelpDeskTicketService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.ai.chat.model.ToolContext;
-import org.springframework.ai.tool.annotation.Tool;
-import org.springframework.ai.tool.annotation.ToolParam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import com.spiringai.open_ai.model.TicketRequest;
+import org.springframework.ai.tool.annotation.Tool;
+import com.spiringai.open_ai.entity.HelpDeskTicket;
+import org.springframework.ai.chat.model.ToolContext;
+import org.springframework.ai.tool.annotation.ToolParam;
+import com.spiringai.open_ai.service.HelpDeskTicketService;
+
 
 import java.util.List;
 
@@ -17,6 +20,7 @@ public class HelpDeskTools {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HelpDeskTools.class);
 
+    @Autowired
     private final HelpDeskTicketService helpDeskTicketService;
 
     public HelpDeskTools(HelpDeskTicketService helpDeskTicketService) {

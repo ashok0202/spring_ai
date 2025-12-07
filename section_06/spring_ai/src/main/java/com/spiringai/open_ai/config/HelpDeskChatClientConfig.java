@@ -18,7 +18,7 @@ import java.util.List;
 @Configuration
 public class HelpDeskChatClientConfig {
 
-    @Value("classpath:/promptTemplates/helpDeskSystemPromptTemplate")
+    @Value("classpath:/promptTemplates/helpDeskSystemPromptTemplate.st")
     Resource systemPromptTemplate;
 
     @Bean("helpdeskChatClient")
