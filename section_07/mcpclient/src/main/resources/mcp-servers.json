@@ -21,6 +21,14 @@
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_GITHUB_TOKEN"
       }
+    },
+    "postgres": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:root@localhost:5432/foodie"
+      ]
     }
   }
 }
