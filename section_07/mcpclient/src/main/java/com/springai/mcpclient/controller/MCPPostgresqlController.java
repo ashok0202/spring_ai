@@ -28,7 +28,7 @@ public class MCPPostgresqlController {
     private static final String SYSTEM_PROMPT = """
             You are a helpful PostgreSQL database assistant.
             You have access to a PostgreSQL database via the 'query' tool.
-            
+
             IMPORTANT RULES:
             - ALWAYS use standard PostgreSQL syntax only.
             - To list tables, use:
@@ -45,7 +45,7 @@ public class MCPPostgresqlController {
                                ToolCallbackProvider toolCallbackProvider) {
 
         Arrays.stream(toolCallbackProvider.getToolCallbacks()).forEach(tool->{
-            LOGGER.info("Tools Callback found: {}",tool);
+            LOGGER.info("Tools Callback found: {}",tool.getToolDefinition());
         });
         this.chatClient = chatClientBuilder.defaultToolCallbacks(toolCallbackProvider)
                 .defaultAdvisors(new SimpleLoggerAdvisor())

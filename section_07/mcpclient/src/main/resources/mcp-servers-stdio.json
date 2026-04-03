@@ -15,6 +15,13 @@
         "@modelcontextprotocol/server-postgres",
         "postgresql://postgres:root@localhost:5432/foodie"
       ]
+    },
+    "spring-ai-mcp": {
+      "command": "C:\\Program Files\\Java\\jdk-21",
+      "args": [
+        "-jar",
+        "/Users/Documents/Storage/Workspaces/spring-ai/section07/mcpserverstdio/target/mcpserverstdio-0.0.1-SNAPSHOT.jar"
+      ]
     }
   }
 }
