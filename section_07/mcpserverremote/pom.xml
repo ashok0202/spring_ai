@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.springai</groupId>
-	<artifactId>mcpserverstdio</artifactId>
+	<artifactId>mcpserverremote</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mcpserverstdio</name>
-	<description>Demo project for Spring MCP Server Using STDIO</description>
+	<name>mcpserverremote</name>
+	<description>Demo project for Spring MCP Server Using Remote invocation</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -43,7 +43,7 @@
 <!--		Its supports the STDIO so removing the webmvc tag-->
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
-			<artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
+			<artifactId>spring-ai-starter-mcp-server</artifactId>
 		</dependency>
 
 
