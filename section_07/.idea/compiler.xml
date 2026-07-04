@@ -10,6 +10,11 @@
         <module name="mcpserverstdio" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mcpclient (1)" target="21" />
+      <module name="mcpelicitation" target="25" />
+      <module name="mcpserverremote" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

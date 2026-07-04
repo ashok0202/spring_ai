@@ -5,11 +5,8 @@ import com.springai.mcpserverstdio.service.HelpDeskTicketService;
 import com.springai.mcpserverstdio.model.TicketRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springaicommunity.mcp.annotation.McpTool;
-import org.springaicommunity.mcp.annotation.McpToolParam;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
